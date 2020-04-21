@@ -32,7 +32,22 @@ long long int factorial (int n) {
 
 Modifique el programa anterior de manera que reciba dos números enteros como parámetros de entrada y calcule sus factoriales de manera concurrente utilizando dos hilos que se ejecutan en paralelo con el hilo principal. El hilo principal deberá esperar a que terminen los otros dos hilos. Recuerda  añadir el parámetro ```-lpthread``` al comienzo del ```gcc``` para compilar la aplicación multihilo.
 
+R//: La solución esta en Code/P1.c
+
+A continuación se presenta un pantallazo del programa corriendo:
+
+![alt text](Images/P1.png "P1")
+
+
 2. Modifique el programa resultante del numeral anterior de manera que no el número de factoriales a calcular no este limitado a 2. Para este caso, el programa puede crear tantos hilos como sean necesarios para el cálculo del factorial dependiendo del número de argumentos pasados. El hilo principal deberá esperar a que terminen el resto de los hilos y a medida que vayan terminando muestran un mensaje que indique el identificador del hilo finalizado.
+
+R//: La solución esta en Code/P2.c
+
+A continuación se presenta un pantallazo del programa corriendo:
+
+![alt text](Images/P2.png "P1")
+
+
 
 3. El siguiente programa cuenta el número de veces que el carácter a o A aparece en el fichero indicado como parámetro de entrada. Modifíquese para que ahora se cree un hilo y sea este el que ejecute la función cuenta.
 

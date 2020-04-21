@@ -17,7 +17,7 @@ medida que vayan terminando muestran un mensaje que indique el identificador del
 void *factorial (void* args);
 
 int main (int argc, char *argv[]) {
-  pthread_t threads_ids[argc];
+  pthread_t threads_ids[argc-1];
   
   for(int i=1;i<argc;i++){
     pthread_create (&threads_ids[i], NULL, factorial, argv[i]);
@@ -33,7 +33,7 @@ int main (int argc, char *argv[]) {
 void*  factorial (void* args) {
   long long int resultado= 1;
   int num;
-  int n = atoi(args);;
+  int n = atoi(args);
   for (num= 2; num<= n; num++) {
     resultado= resultado*num;
     printf ("Factorial de %d, resultado parcial %lld\n", n, resultado);
